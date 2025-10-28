@@ -1,27 +1,28 @@
 # TODO
-- [X] Delay between strike 3 and game over screen
-- [X] Big red X boxes for strikes
-- [X] Display strike count immediately after a strike instead of waiting for next round
-- [X] Make buttons bigger and prettier
-- [X] Implement time selection on main page
-- [X] Make the countdown bar fancier
-  - [X] Change color toward red as it counts down
-  - [X] Flash for urgent ending
-- [X] Allow book exclusion
-  - [X] Create SETTINGS screen
-- [X] Other Books 
-  - [X] Create Files for NT and DC
-  - [X] Selection Menu
-    - [X] UI
-    - [X] Make it work
-  - [X] Create File for latest GenCon
-  - [X] ONLY latest GenCon
-- [X] Show score on Game Over screen
-- [X] Disable timer with Main Menu button
-- [X] Insert hyperlink on reference reveal to allow going to churchofjesuschrist.org to view the chapter and see context
-- [O] Use faces of prophets as players (Is this legal? NO.)
-- [X] Fix "Strikes: text" bug
-- [X] Add Main Menu button to game over screen
+- Completed
+  - [X] Delay between strike 3 and game over screen
+  - [X] Big red X boxes for strikes
+  - [X] Display strike count immediately after a strike instead of waiting for next round
+  - [X] Make buttons bigger and prettier
+  - [X] Implement time selection on main page
+  - [X] Make the countdown bar fancier
+    - [X] Change color toward red as it counts down
+    - [X] Flash for urgent ending
+  - [X] Allow book exclusion
+    - [X] Create SETTINGS screen
+  - [X] Other Books 
+    - [X] Create Files for NT and DC
+    - [X] Selection Menu
+      - [X] UI
+      - [X] Make it work
+    - [X] Create File for latest GenCon
+    - [X] ONLY latest GenCon
+  - [X] Show score on Game Over screen
+  - [X] Disable timer with Main Menu button
+  - [X] Insert hyperlink on reference reveal to allow going to churchofjesuschrist.org to view the chapter and see context
+  - [O] Use faces of prophets as players (Is this legal? NO.)
+  - [X] Fix "Strikes: text" bug
+  - [X] Add Main Menu button to game over screen
 - [ ] Implement a leaderboard
 - [ ] Flash text on screen (not an alert) when a strike is hit ("Strike 1!" etc.)
 - [ ] Sort the functions in BOMB.js to make it easier to seek through. Maybe refactor out some other .js files
@@ -32,14 +33,21 @@
   - [X] Also Other timing options
 - [ ] Add button to game-over screen that allows viewing the game screen to see how close the player was, etc. without the option to keep playing
 - [ ] Allow for adjusting thresholds in settings as well
+- [ ] Style Improvements
+  - [ ] Game Screen
+    - [ ] Show strikes immediately under diamond
 - [ ] UI Improvements
   - [ ] Settings Screen
     - [ ] Add spacing between elements
     - [ ] Add multiple tabs for space management
     - [ ] Fix Checkbox menu to make it dropdown instead of always being big
     - [X] Add 'check all' and 'uncheck all' option for chapter exclusion selection
+    - [ ] Match styling of multi-check dropdown with other dropdowns
   - [ ] Game Screen
     - [ ] Set fixed size verse display with auto-scrolling as needed
+    - [ ] Staple diamond to the top of screen so it's easily visible next to verse
+  - [ ] Main Menu
+    - [ ] Center vertically
 - [ ] Refactoring
   - [ ] HTML
     - [ ] 

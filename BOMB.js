@@ -55,7 +55,7 @@ let difficulty = 'easy'; // Default difficulty
 let includedBooks = new Set(); // Books to include in selection
 let currentVolume = 'bofm'; // Default volume
 let thresholdSetting = 'average';
-let numDisplayVerses = 5;
+let numDisplayVerses = 3;
 
 const basePositions = {
   home:  { left: 50,  top: 90 },
