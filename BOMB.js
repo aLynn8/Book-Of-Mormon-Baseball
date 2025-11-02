@@ -29,7 +29,8 @@ const GAME_STATES = {
   MENU: 'menu',
   IN_GAME: 'in_game',
   GAME_OVER: 'game_over',
-  SETTINGS: 'settings'
+  SETTINGS: 'settings',
+  LEADERBOARD: 'leaderboard'
 }
 
 const vSelect = document.getElementById('volume-select-value');
@@ -132,6 +133,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('settings-button').addEventListener('click', function () {
     showScreen(GAME_STATES.SETTINGS);
+  });
+
+  document.getElementById('leaderboard-button').addEventListener('click', function () {
+    document.getElementById('most-recent-score').textContent = "Most Recent Score: "
+     + localStorage.getItem("Last Score");
+     document.getElementById('high-score').textContent = "High Score: "
+     + localStorage.getItem("High Score");
+    showScreen(GAME_STATES.LEADERBOARD);
   });
 
   document.getElementById('check-all-inex').addEventListener('click', function (){
@@ -510,6 +519,7 @@ function showScreen(state){
   document.getElementById('game-screen').style.display = (state === GAME_STATES.IN_GAME) ? 'block' : 'none';
   document.getElementById('game-over-screen').style.display = (state === GAME_STATES.GAME_OVER) ? 'block' : 'none';
   document.getElementById('settings-screen').style.display = (state === GAME_STATES.SETTINGS) ? 'block' : 'none';
+  document.getElementById('leaderboard-screen').style.display = (state === GAME_STATES.LEADERBOARD) ? 'block' : 'none';
 }
 
 function addStrike(){
@@ -539,8 +549,15 @@ function startGame(){
 
 async function endGame(){
   document.getElementById('final-score').textContent = score;
+  localStorage.setItem("Last Score", score);
+  resetBases();
+  if(score > localStorage.getItem("High Score")) localStorage.setItem("High Score", score);
   sleep(1000).then(() => {
     showScreen(GAME_STATES.GAME_OVER);
     stopTimer();
   }); 
+}
+
+function resetBases(){
+  let bases = [false, false, false, false];
 }

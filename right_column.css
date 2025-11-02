@@ -1,8 +1,17 @@
+#right-panel {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 #diamond {
     position: relative;
+    top: 0;
     width: 400px;
     height: 400px;
-    margin: auto;
+    margin-top: 0;
     background: #7cf786;
 }
 

@@ -45,14 +45,6 @@ h1 {
     align-items: center;
 }
 
-#right-panel {
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 #timer-container {
     min-height: 20px;
     width: 100%;
