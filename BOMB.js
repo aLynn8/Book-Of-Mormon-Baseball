@@ -16,7 +16,6 @@ const THRESHOLD_ARRAYS = {
   narrow: [1, 2, 4, 7],
   pinhead: [0, 1, 2, 4]
 }
-
 const STANDARD_WORKS_FILE_NAMES = {
   bofm: 'data/bofm.json',
   ot: 'data/ot.json',
@@ -24,7 +23,6 @@ const STANDARD_WORKS_FILE_NAMES = {
   dc: 'data/dc.json',
   gc: 'data/gc.json'
 };
-
 const GAME_STATES = {
   MENU: 'menu',
   IN_GAME: 'in_game',
@@ -559,5 +557,13 @@ async function endGame(){
 }
 
 function resetBases(){
-  let bases = [false, false, false, false];
+  console.log("Bases Reset");
+  bases = [false, false, false, false];
+  runners.length = 0;
+  document.querySelectorAll('#diamond .runner').forEach(r=>r.remove());
+  updateBases();
 }
+
+window.addStrike = addStrike;
+window.advanceRunners = advanceRunners;
+window.resetBases = resetBases;

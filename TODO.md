@@ -32,7 +32,7 @@
 - [X] Add 'No Time Limit' Option
   - [X] Also Other timing options
 - [ ] Add button to game-over screen that allows viewing the game screen to see how close the player was, etc. without the option to keep playing
-- [ ] Allow for adjusting thresholds in settings as well
+- [X] Allow for adjusting thresholds in settings as well
 - [ ] Style Improvements
   - [ ] Game Screen
     - [ ] Show strikes immediately under diamond
@@ -45,13 +45,20 @@
     - [ ] Match styling of multi-check dropdown with other dropdowns
   - [ ] Game Screen
     - [ ] Set fixed size verse display with auto-scrolling as needed
-    - [ ] Staple diamond to the top of screen so it's easily visible next to verse
+    - [X] Staple diamond to the top of screen so it's easily visible next to verse
   - [ ] Main Menu
     - [ ] Center vertically
 - [ ] Refactoring
   - [ ] HTML
     - [ ] 
   - [ ] JS
-    - [ ] 
+    - [ ] Add addAllEventListeners() function to clean up initiation code
   - [ ] CSS
     - [ ] 
+- [ ] Bugs and Features 
+  - [ ] Bug fixes
+    - [ ] Reset runners when game ends
+    - [ ] Only allow one guess before reset. (This might be re-added as a feature later, but it's a bug right now)
+  - [ ] Features
+    - [ ] Offer default difficulty options to make selection easy
+    - [ ] Put current independent selection options on a different screen ("Custom Difficulty Level")
