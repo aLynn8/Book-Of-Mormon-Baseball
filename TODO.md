@@ -57,6 +57,7 @@
     - [ ] 
 - [ ] Bugs and Features 
   - [ ] Bug fixes
+    - [ ] strikes:strikes on game screen right collumn
     - [X] Reset runners when game ends
     - [ ] Disable buttons when they should be disabled
       - [ ] New Round
