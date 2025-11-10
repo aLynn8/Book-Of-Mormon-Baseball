@@ -38,6 +38,8 @@ const dropdown = document.getElementById('include-exclude-dropdown');
 
 import { startTimer, stopTimer } from "./timer.js";
 import { makeScriptureLink, sleep } from "./helper_functions.js";
+import { initializeGame } from "./game_logic.js";
+
 
 let gameState = GAME_STATES.MENU;
 
@@ -78,23 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
   fetchScriptures();
   
 
-  document.getElementById('volume-select-value').addEventListener('change', function () {
-    populateIncludeExcludeOptions();
-  });
-
-  document.getElementById('threshold-value').addEventListener('change', function() {
-    thresholdSetting = document.getElementById('threshold-value').value;
-  });
-
-  document.getElementById('revealDistance').addEventListener('click', function () {
-    const refEl = document.getElementById('distance');
-    console.log('Distance reveal button clicked');
-    // SIMPLE REVEAL: just show once
-    if (!refEl.textContent && currGuessDistance != Infinity) {
-      if(currGuessDistance === 0) refEl.textContent = `(Exactly Correct! Great Job!)`;
-      refEl.textContent = `(Off by ${currGuessDistance} chapters)`;
-    }
-  });
+  document.getElementById('volume-select-value').addEventListener('change', handleVSelectChange);
+  document.getElementById('threshold-value').addEventListener('change', handleThreshValueChange);
+  document.getElementById('revealDistance').addEventListener('click', handleRevealDistance);
 
   document.getElementById('revealReference').addEventListener('click', function () {
     const refEl = document.getElementById('reference');
@@ -576,3 +564,20 @@ function resetBases(){
 window.addStrike = addStrike;
 window.advanceRunners = advanceRunners;
 window.resetBases = resetBases;
+
+// Event Listener Functions (Will be exported or regrouped soon I think)
+function handleVSelectChange(){
+  populateIncludeExcludeOptions();
+}
+function handleThreshValueChange(){
+  thresholdSetting = document.getElementById('threshold-value').value;
+}
+function handleRevealDistance(){
+  const refEl = document.getElementById('distance');
+    console.log('Distance reveal button clicked');
+    // SIMPLE REVEAL: just show once
+    if (!refEl.textContent && currGuessDistance != Infinity) {
+      if(currGuessDistance === 0) refEl.textContent = `(Exactly Correct! Great Job!)`;
+      refEl.textContent = `(Off by ${currGuessDistance} chapters)`;
+    }
+}

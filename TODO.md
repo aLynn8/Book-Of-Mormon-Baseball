@@ -54,12 +54,10 @@
     - [ ] Run through the whole file and prayerfully record refactoring ideas and insights
   - [ ] **CSS**
     - [ ] 
-- [ ] Bugs and Features 
-  - [ ] Bug fixes
-    - [ ] strikes:strikes on game screen right collumn
 - [ ] **Bugs and Features** 
   - [ ] **Bug fixes**
     - [X] Reset runners when game ends
+    - [ ] strikes:strikes on game screen right column
     - [X] Disable buttons when they should be disabled
       - [X] New Round
       - [X] Only allow one guess before reset. (This might be re-added as a feature later, but it's a bug right now)
@@ -67,4 +65,4 @@
   - [ ] **Features**
     - [ ] Offer default difficulty options to make selection easy
     - [ ] Put current independent selection options on a different screen ("Custom Difficulty Level")
-    - [ ] 
+    - [ ] Turn Game-over screen into an overlay
