@@ -39,6 +39,13 @@ const dropdown = document.getElementById('include-exclude-dropdown');
 import { startTimer, stopTimer } from "./timer.js";
 import { makeScriptureLink, sleep } from "./helper_functions.js";
 
+let gameState = GAME_STATES.MENU;
+
+// Variable Initiation
+let includedBooks = new Set(); // Books to include in selection
+let score = 0;
+let strikes = 0;
+let round = 0;
 let scriptures = null;
 let currentSelection = null;
 let allVerses = [];
@@ -46,14 +53,11 @@ let chapterIndexMap = {};
 let currGuessDistance = Infinity;
 let bases = [false, false, false, false]; // Tracks whether each base is occupied
 let runners = []; // Tracks runner elements for animation
-let score = 0;
-let strikes = 0;
-let round = 0;
-let gameState = GAME_STATES.MENU;
-let difficulty = 'easy'; // Default difficulty
-let includedBooks = new Set(); // Books to include in selection
-let currentVolume = 'bofm'; // Default volume
-let thresholdSetting = 'average';
+
+// Default Setting Values
+let difficulty = 'easy'; 
+let currentVolume = 'bofm';
+let thresholdSetting = 'average'; 
 let numDisplayVerses = 3;
 
 const basePositions = {

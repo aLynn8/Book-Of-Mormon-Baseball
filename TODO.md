@@ -25,7 +25,6 @@
   - [X] Add Main Menu button to game over screen
 - [ ] Implement a leaderboard
 - [ ] Flash text on screen (not an alert) when a strike is hit ("Strike 1!" etc.)
-- [ ] Sort the functions in BOMB.js to make it easier to seek through. Maybe refactor out some other .js files
 - [ ] Add BOM styling to all elements (Background texture & color, gold letters, font, etc.)
 - [ ] Disable new round button until a guess has been made
 - [ ] Clean up console.log clutter
@@ -35,7 +34,7 @@
 - [X] Allow for adjusting thresholds in settings as well
 - [ ] Style Improvements
   - [ ] Game Screen
-    - [ ] Show strikes immediately under diamond
+    - [X] Show strikes immediately under diamond
 - [ ] UI Improvements
   - [ ] Settings Screen
     - [ ] Add spacing between elements
@@ -53,12 +52,17 @@
     - [ ] 
   - [ ] JS
     - [ ] Add addAllEventListeners() function to clean up initiation code
+    - [ ] Run through the whole file and prayerfully record refactoring ideas and insights
   - [ ] CSS
     - [ ] 
 - [ ] Bugs and Features 
   - [ ] Bug fixes
-    - [ ] Reset runners when game ends
-    - [ ] Only allow one guess before reset. (This might be re-added as a feature later, but it's a bug right now)
+    - [X] Reset runners when game ends
+    - [ ] Disable buttons when they should be disabled
+      - [ ] New Round
+      - [ ] Only allow one guess before reset. (This might be re-added as a feature later, but it's a bug right now)
+      - [ ] Disable all except reveal buttons on game-over 
   - [ ] Features
     - [ ] Offer default difficulty options to make selection easy
     - [ ] Put current independent selection options on a different screen ("Custom Difficulty Level")
+    - [ ] 

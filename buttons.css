@@ -41,9 +41,11 @@ select:hover {
   margin-bottom: 40px; /* give space for dropdown expansion */
 }
 
-/* 
- select:focus {
-  outline: none;
-  background-color: #dee2e6;
-  }
-*/
+button:disabled {
+    background-color: #a9a9a9;
+    color: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .7;
+    transform: none;
+}
