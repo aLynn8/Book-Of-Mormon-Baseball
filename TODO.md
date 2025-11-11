@@ -44,6 +44,7 @@
   - [ ] **Game Screen**
     - [ ] Set fixed size verse display with auto-scrolling as needed
     - [X] Staple diamond to the top of screen so it's easily visible next to verse
+    - [ ] Move reveal text directly under '(off by)' text
   - [ ] **Main Menu**
     - [ ] Center vertically
 - [ ] **Refactoring**
