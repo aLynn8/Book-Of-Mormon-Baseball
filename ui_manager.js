@@ -8,7 +8,7 @@ export function updateStrikeBoxes(strikes){
 export function updateScoreboard(score, round, strikes){
     document.getElementById("score").textContent = `${score}`;
     document.getElementById("round").textContent = `${round}`;
-    document.getElementById("strikes").textContent = `Strikes: ${strikes}`;
+    document.getElementById("strikes").textContent = `${strikes}`;
     updateStrikeBoxes(strikes);
 }
 

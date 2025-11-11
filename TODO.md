@@ -27,6 +27,7 @@
 - [ ] Flash text on screen (not an alert) when a strike is hit ("Strike 1!" etc.)
 - [ ] Add BOM styling to all elements (Background texture & color, gold letters, font, etc.)
 - [ ] Clean up console.log clutter
+  - [ ] Runner advancement alerts
 - [X] Add 'No Time Limit' Option
   - [X] Also Other timing options
 - [ ] Add button to game-over screen that allows viewing the game screen to see how close the player was, etc. without the option to keep playing
@@ -34,6 +35,8 @@
 - [ ] Style Improvements
   - [ ] Game Screen
     - [X] Show strikes immediately under diamond
+
+
 - [ ] **UI Improvements**
   - [ ] Settings Screen
     - [ ] Add spacing between elements
@@ -47,6 +50,8 @@
     - [ ] Move reveal text directly under '(off by)' text
   - [ ] **Main Menu**
     - [ ] Center vertically
+
+
 - [ ] **Refactoring**
   - [ ] **HTML**
     - [ ] 
@@ -54,16 +59,23 @@
     - [ ] Add addAllEventListeners() function to clean up initiation code
     - [ ] Run through the whole file and prayerfully record refactoring ideas and insights
   - [ ] **CSS**
-    - [ ] 
+    - [ ]  
+
+
 - [ ] **Bugs and Features** 
   - [ ] **Bug fixes**
-    - [X] Reset runners when game ends
-    - [ ] strikes:strikes on game screen right column
-    - [X] Disable buttons when they should be disabled
-      - [X] New Round
-      - [X] Only allow one guess before reset. (This might be re-added as a feature later, but it's a bug right now)
-      - [X] Disable all except reveal buttons on game-over 
+    - [ ]  
   - [ ] **Features**
     - [ ] Offer default difficulty options to make selection easy
     - [ ] Put current independent selection options on a different screen ("Custom Difficulty Level")
     - [ ] Turn Game-over screen into an overlay
+- [ ] **Misc**
+  - [ ] Increase searchability online
+    - [ ] Add favicon.ico
+    - [ ] Add metadata
+    - [ ] Create sitemap
+    - [ ] Use google search console
+    - [ ] Create backlinks (increases weight in search engine sorting algorithms)
+      - [ ] Share on social media
+      - [ ] Share on forums
+      - [ ] Share on other websites

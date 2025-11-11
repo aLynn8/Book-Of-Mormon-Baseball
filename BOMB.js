@@ -470,8 +470,7 @@ function handleRevealDistance(){
 }
 function handleRevealReference(){
   const refEl = document.getElementById('reference');
-  console.log('Reveal button clicked');
-  // SIMPLE REVEAL: just show once
+  //refEl.hidden = false;
   if (!refEl.textContent && currentSelection) {
     let cs = currentSelection;
     const url = makeScriptureLink(currentVolume, cs);
@@ -511,10 +510,8 @@ function handleUncheckAllInex(){
   includedBooks.clear();
 }
 function handleMainMenuButton(){
-  showScreen(GAME_STATES.MENU);
-    stopTimer();
-    // Reset game state. Eventually move to new resetGame() function
-    strikes = 0;
+  endGame()
+  showScreen(GAME_STATES.MENU); 
 }
 function handleStartRestart(button){
 } // Look up why this broke

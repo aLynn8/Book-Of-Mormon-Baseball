@@ -94,3 +94,7 @@ h1 {
     text-align: center;
     padding: 20px;
 }
+
+#menu-screen{
+    background-image: url('./images/BOM_texture_background.jpg');
+}
