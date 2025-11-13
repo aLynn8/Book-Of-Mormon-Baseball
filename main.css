@@ -134,3 +134,38 @@ h1 {
     background-color: #96750a;
     transform: scale(1.05);
 }
+
+#game-over-overlay {
+  position: fixed;          /* stays over everything */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* translucent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;            /* make sure it's above everything else */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#game-over-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-content {
+  background-color: white;
+  color: black;
+  padding: 2em;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* optional helper class to keep it hidden initially */
+.hidden {
+  display: none;
+}
