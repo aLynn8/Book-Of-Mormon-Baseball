@@ -43,5 +43,10 @@ export const EL_NAMES = {
   IESelect: document.getElementById('include-exclude-values'),
   dropdown: document.getElementById('include-exclude-dropdown'),
   bookSelect: document.getElementById('bookSelect'),
-  chapterSelect: document.getElementById('chapterSelect')
+  chapterSelect: document.getElementById('chapterSelect'),
+  overlay: document.getElementById('game-over-overlay'),
+  finalScore: document.getElementById('final-score'),
+}
+export const BUTTON_ELS = {
+  hideOverlay: document.getElementById('hide-overlay')
 }

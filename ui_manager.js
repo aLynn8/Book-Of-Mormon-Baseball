@@ -1,5 +1,10 @@
 import {EL_NAMES} from "./config.js";
 
+export function showGameOver(score){
+  EL_NAMES.finalScore.textContent = score;
+  EL_NAMES.overlay.classList.add('visible');
+}
+
 export function populateIncludeExcludeOptions(scriptures, includedBooks) {
   EL_NAMES.IESelect.innerHTML = ''; // Clear previous options
     Object.keys(scriptures).forEach(bookName => {

@@ -1,9 +1,11 @@
 import { startTimer, stopTimer } from "./timer.js";
 import { makeScriptureLink, sleep, nextFrame } from "./helper_functions.js";
 import { initializeGame } from "./game_logic.js";
-import {populateIncludeExcludeOptions, populateGuessOptions, updateScoreboard} from "./ui_manager.js";
+import {populateIncludeExcludeOptions, populateGuessOptions, updateScoreboard,
+  showGameOver} from "./ui_manager.js";
 import {fetchScriptures} from "./data_manager.js";
-import {EL_NAMES, ANIMATION_TIME_MS, TIMER_DURATIONS, THRESHOLD_ARRAYS, STANDARD_WORKS_FILE_NAMES, GAME_STATES, BASE_POSITIONS} from './config.js'
+import {BUTTON_ELS, EL_NAMES, ANIMATION_TIME_MS, TIMER_DURATIONS, 
+  THRESHOLD_ARRAYS, STANDARD_WORKS_FILE_NAMES, GAME_STATES, BASE_POSITIONS} from './config.js'
 
 let gameState = GAME_STATES.MENU;
 
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('settings-button').addEventListener('click',handleSettingsButton);
   document.getElementById('check-all-inex').addEventListener('click', handleCheckAllInex);
   document.getElementById('uncheck-all-inex').addEventListener('click', handleUncheckAllInex);
+  BUTTON_ELS.hideOverlay.addEventListener('click', handleHideOverlay);
   EL_NAMES.vSelect.addEventListener('change', handleVSelectChange); 
   EL_NAMES.bookSelect.addEventListener('change', handleBookSelectChange);
 
@@ -363,7 +366,6 @@ function showScreen(state){
   gameState = state;
   document.getElementById('menu-screen').style.display = (state === GAME_STATES.MENU) ? 'block' : 'none';
   document.getElementById('game-screen').style.display = (state === GAME_STATES.IN_GAME) ? 'block' : 'none';
-  document.getElementById('game-over-screen').style.display = (state === GAME_STATES.GAME_OVER) ? 'block' : 'none';
   document.getElementById('settings-screen').style.display = (state === GAME_STATES.SETTINGS) ? 'block' : 'none';
   document.getElementById('leaderboard-screen').style.display = (state === GAME_STATES.LEADERBOARD) ? 'block' : 'none';
 }
@@ -391,11 +393,10 @@ async function endGame(){
   document.getElementById('final-score').textContent = score;
   localStorage.setItem("Last Score", score);
   resetBases();
-
+  stopTimer();
   if(score > localStorage.getItem("High Score")) localStorage.setItem("High Score", score);
   sleep(1000).then(() => {
-    //showScreen(GAME_STATES.GAME_OVER);
-    stopTimer();
+    showGameOver(score);
   }); 
 }
 
@@ -486,6 +487,9 @@ function handleBookSelectChange(){
 
     // Enable submit button when both selections are made
     document.getElementById('finalizeGuess').disabled = !(EL_NAMES.bookSelect.value && EL_NAMES.chapterSelect.value);
+}
+function handleHideOverlay(){
+  EL_NAMES.overlay.classList.remove('visible');
 }
 function handleStartRestart(button){
 } // Look up why this broke

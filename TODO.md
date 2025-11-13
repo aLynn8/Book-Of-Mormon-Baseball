@@ -41,13 +41,9 @@
   - [ ] Settings Screen
     - [ ] Add spacing between elements
     - [ ] Add multiple tabs for space management
-    - [X] Fix Checkbox menu to make it dropdown instead of always being big
-    - [X] Add 'check all' and 'uncheck all' option for chapter exclusion selection
     - [ ] Match styling of multi-check dropdown with other dropdowns
   - [ ] **Game Screen**
     - [ ] Set fixed size verse display with auto-scrolling as needed
-    - [X] Staple diamond to the top of screen so it's easily visible next to verse
-    - [ ] Move reveal text directly under '(off by)' text
   - [ ] **Main Menu**
     - [ ] Center vertically
 
@@ -57,14 +53,17 @@
     - [ ] 
   - [ ] **JS**
     - [ ] Add addAllEventListeners() function to clean up initiation code?
+    - [ ] Rename EL_NAMES to ELS (until that conflicts it's much easier)
+    - [ ] Use ELS everywhere
+    - [ ] Make seperate EL_ constant objects for buttons [X] and other elements [ ] to make referencing easier (in config.js)
     - [ ] Run through the whole file and prayerfully record refactoring ideas and insights
     - [ ] Move from BOMB
       - [ ] To ui_manager
-        - [X] populateGuessOptions()
+        - [ ]
       - [ ] To game_logic
         - [ ] 
   - [ ] **CSS**
-    - [ ]  
+    - [ ] Pass the code by AI to ask for general style/CSS refactoring advice 
 
 
 - [ ] **Bugs and Features** 
